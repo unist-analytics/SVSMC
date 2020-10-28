@@ -21,7 +21,7 @@ Gmetrics<-c()
 dans<-c()
 
 
-for (nn in 1:2){
+for (nn in 1:100){
   mauc_s<-data.frame(matrix(NA,nrow=1,ncol=8))
   names(mauc_s)<-c("ori","syn","syn3","smo","scut","edit","IncuBAtE")
   Gmetric_s<-data.frame(matrix(NA,nrow=1,ncol=8))
@@ -306,9 +306,6 @@ round(colMeans(beta_bound),3)
 round(apply(maucs,2,sd),3)
 round(apply(Gmetrics,2,sd),3)
 round(apply(dans,2,sd),3)
-
-
-save(obj,file="real_1022.RData")
 
 mauc<-obj[[1]]
 gmean<-obj[[2]]
